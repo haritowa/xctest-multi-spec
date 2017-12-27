@@ -7,33 +7,73 @@
 //
 
 #import <XCTest/XCTest.h>
-
-@interface PerformanceMultiSpec : XCTestCase
-
-@end
+#import "TestMultiPerformanceTestsTests-Swift.h" // TODO: Rename
+#import "PerformanceMultiSpec.h"
 
 @implementation PerformanceMultiSpec
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
++ (SEL)addInstanceMethodForTestInvocation:(PerformanceTestInvocation *)performanceInvocation classSelectorNames:(NSMutableSet<NSString*> *)selectorNames {
+    // Resolve selectors with same name
+    NSString *originalName = [performanceInvocation suggestedTestName];
+    NSString *selectorName = originalName;
+    NSUInteger i = 1;
+    
+    while ([selectorNames containsObject:selectorName]) {
+        selectorName = [NSString stringWithFormat:@"%@_%tu", originalName, ++i];
+    }
+    
+    if (i != 1) {
+        NSLog(@"PerformanceMultiSpec: duplicate selector for test named \"%@\"", originalName);
+    }
+    
+    [selectorNames addObject:selectorName];
+    
+    NSArray<XCTPerformanceMetric> *metrics = [self defaultPerformanceMetrics];
+    
+    // Build selector
+    // Pack test closure with preparation steps
+    IMP implementation = imp_implementationWithBlock(^(PerformanceMultiSpec *self){
+        [self measureMetrics:metrics automaticallyStartMeasuring:false forBlock:^{
+            [performanceInvocation prepareTestInteration];
+            
+            [self startMeasuring];
+            [performanceInvocation runTestIteration];
+            [self stopMeasuring];
+        }];
+    });
+    
+    const char *types = [[NSString stringWithFormat:@"%s%s%s", @encode(void), @encode(id), @encode(SEL)] UTF8String];
+    
+    SEL result = NSSelectorFromString(selectorName);
+    class_addMethod(self, result, implementation, types);
+    
+    return result;
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
++ (NSArray *)testInvocations {
+    NSArray *performanceInvocations = [self performanceTestInvocations];
+    NSMutableArray *invocations = [NSMutableArray arrayWithCapacity:[performanceInvocations count]];
+
+    NSMutableSet<NSString*>* selectorNames = [NSMutableSet set];
+
+    for (PerformanceTestInvocation *testInvocation in performanceInvocations) {
+        // Add method to instance
+        SEL selector = [self addInstanceMethodForTestInvocation:testInvocation classSelectorNames:selectorNames];
+
+        // Generate invocation for XCTest
+        NSMethodSignature *signature = [self instanceMethodSignatureForSelector:selector];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+        invocation.selector = selector;
+
+        [invocations addObject:invocation];
+    }
+
+    return invocations;
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
++ (nonnull NSArray<PerformanceTestInvocation*> *) performanceTestInvocations {
+    return [NSArray new];
 }
 
 @end
+
