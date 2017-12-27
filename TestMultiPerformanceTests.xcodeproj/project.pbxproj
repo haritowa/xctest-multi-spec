@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF05B51F1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05B51E1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.swift */; };
+		EF05B5281FF3DA460047D66C /* PerformanceMultiSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EF05B5271FF3DA460047D66C /* PerformanceMultiSpec.m */; };
 		EF8BD5D01FF3D923009D8C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BD5CF1FF3D923009D8C4A /* AppDelegate.swift */; };
 		EF8BD5D21FF3D923009D8C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BD5D11FF3D923009D8C4A /* ViewController.swift */; };
 		EF8BD5D51FF3D923009D8C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8BD5D31FF3D923009D8C4A /* Main.storyboard */; };
@@ -14,7 +16,22 @@
 		EF8BD5DA1FF3D923009D8C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8BD5D81FF3D923009D8C4A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EF05B5211FF3DA0F0047D66C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF8BD5C41FF3D923009D8C4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF8BD5CB1FF3D923009D8C4A;
+			remoteInfo = TestMultiPerformanceTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		EF05B51C1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMultiPerformanceTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF05B51E1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMultiPerformanceTestsTests.swift; sourceTree = "<group>"; };
+		EF05B5201FF3DA0F0047D66C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF05B5261FF3DA460047D66C /* TestMultiPerformanceTestsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestMultiPerformanceTestsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		EF05B5271FF3DA460047D66C /* PerformanceMultiSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceMultiSpec.m; sourceTree = "<group>"; };
 		EF8BD5CC1FF3D923009D8C4A /* TestMultiPerformanceTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMultiPerformanceTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8BD5CF1FF3D923009D8C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF8BD5D11FF3D923009D8C4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +42,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EF05B5191FF3DA0F0047D66C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF8BD5C91FF3D923009D8C4A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF05B51D1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF05B51E1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.swift */,
+				EF05B5201FF3DA0F0047D66C /* Info.plist */,
+				EF05B5271FF3DA460047D66C /* PerformanceMultiSpec.m */,
+				EF05B5261FF3DA460047D66C /* TestMultiPerformanceTestsTests-Bridging-Header.h */,
+			);
+			path = TestMultiPerformanceTestsTests;
+			sourceTree = "<group>";
+		};
 		EF8BD5C31FF3D923009D8C4A = {
 			isa = PBXGroup;
 			children = (
 				EF8BD5CE1FF3D923009D8C4A /* TestMultiPerformanceTests */,
+				EF05B51D1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests */,
 				EF8BD5CD1FF3D923009D8C4A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				EF8BD5CC1FF3D923009D8C4A /* TestMultiPerformanceTests.app */,
+				EF05B51C1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +104,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EF05B51B1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF05B5251FF3DA0F0047D66C /* Build configuration list for PBXNativeTarget "TestMultiPerformanceTestsTests" */;
+			buildPhases = (
+				EF05B5181FF3DA0F0047D66C /* Sources */,
+				EF05B5191FF3DA0F0047D66C /* Frameworks */,
+				EF05B51A1FF3DA0F0047D66C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF05B5221FF3DA0F0047D66C /* PBXTargetDependency */,
+			);
+			name = TestMultiPerformanceTestsTests;
+			productName = TestMultiPerformanceTestsTests;
+			productReference = EF05B51C1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EF8BD5CB1FF3D923009D8C4A /* TestMultiPerformanceTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF8BD5DE1FF3D923009D8C4A /* Build configuration list for PBXNativeTarget "TestMultiPerformanceTests" */;
@@ -94,6 +149,12 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = haritowa;
 				TargetAttributes = {
+					EF05B51B1FF3DA0F0047D66C = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EF8BD5CB1FF3D923009D8C4A;
+					};
 					EF8BD5CB1FF3D923009D8C4A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -114,11 +175,19 @@
 			projectRoot = "";
 			targets = (
 				EF8BD5CB1FF3D923009D8C4A /* TestMultiPerformanceTests */,
+				EF05B51B1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EF05B51A1FF3DA0F0047D66C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF8BD5CA1FF3D923009D8C4A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +201,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EF05B5181FF3DA0F0047D66C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF05B51F1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.swift in Sources */,
+				EF05B5281FF3DA460047D66C /* PerformanceMultiSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF8BD5C81FF3D923009D8C4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +220,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF05B5221FF3DA0F0047D66C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF8BD5CB1FF3D923009D8C4A /* TestMultiPerformanceTests */;
+			targetProxy = EF05B5211FF3DA0F0047D66C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EF8BD5D31FF3D923009D8C4A /* Main.storyboard */ = {
@@ -163,6 +249,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EF05B5231FF3DA0F0047D66C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestMultiPerformanceTestsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haritowa.TestMultiPerformanceTestsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestMultiPerformanceTestsTests/TestMultiPerformanceTestsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestMultiPerformanceTests.app/TestMultiPerformanceTests";
+			};
+			name = Debug;
+		};
+		EF05B5241FF3DA0F0047D66C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestMultiPerformanceTestsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haritowa.TestMultiPerformanceTestsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestMultiPerformanceTestsTests/TestMultiPerformanceTestsTests-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestMultiPerformanceTests.app/TestMultiPerformanceTests";
+			};
+			name = Release;
+		};
 		EF8BD5DC1FF3D923009D8C4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -301,6 +422,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EF05B5251FF3DA0F0047D66C /* Build configuration list for PBXNativeTarget "TestMultiPerformanceTestsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF05B5231FF3DA0F0047D66C /* Debug */,
+				EF05B5241FF3DA0F0047D66C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EF8BD5C71FF3D923009D8C4A /* Build configuration list for PBXProject "TestMultiPerformanceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
