@@ -10,6 +10,9 @@
 		EF05B51F1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05B51E1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.swift */; };
 		EF05B5281FF3DA460047D66C /* PerformanceMultiSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EF05B5271FF3DA460047D66C /* PerformanceMultiSpec.m */; };
 		EF05B52C1FF3DB630047D66C /* PerformanceTestInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05B52B1FF3DB630047D66C /* PerformanceTestInvocation.swift */; };
+		EF05B5311FF42B100047D66C /* StatePerformanceTestInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05B5301FF42B100047D66C /* StatePerformanceTestInvocation.swift */; };
+		EF05B5331FF52A990047D66C /* TestCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05B5321FF52A990047D66C /* TestCondition.swift */; };
+		EF05B5351FF52ACF0047D66C /* PerformanceTestInvocationsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF05B5341FF52ACF0047D66C /* PerformanceTestInvocationsGenerator.swift */; };
 		EF8BD5D01FF3D923009D8C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BD5CF1FF3D923009D8C4A /* AppDelegate.swift */; };
 		EF8BD5D21FF3D923009D8C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BD5D11FF3D923009D8C4A /* ViewController.swift */; };
 		EF8BD5D51FF3D923009D8C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8BD5D31FF3D923009D8C4A /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 		EF05B5271FF3DA460047D66C /* PerformanceMultiSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceMultiSpec.m; sourceTree = "<group>"; };
 		EF05B52B1FF3DB630047D66C /* PerformanceTestInvocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTestInvocation.swift; sourceTree = "<group>"; };
 		EF05B52D1FF3E1FB0047D66C /* PerformanceMultiSpec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformanceMultiSpec.h; sourceTree = "<group>"; };
+		EF05B5301FF42B100047D66C /* StatePerformanceTestInvocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePerformanceTestInvocation.swift; sourceTree = "<group>"; };
+		EF05B5321FF52A990047D66C /* TestCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCondition.swift; sourceTree = "<group>"; };
+		EF05B5341FF52ACF0047D66C /* PerformanceTestInvocationsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTestInvocationsGenerator.swift; sourceTree = "<group>"; };
 		EF8BD5CC1FF3D923009D8C4A /* TestMultiPerformanceTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMultiPerformanceTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8BD5CF1FF3D923009D8C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF8BD5D11FF3D923009D8C4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,11 +72,14 @@
 			isa = PBXGroup;
 			children = (
 				EF05B51E1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.swift */,
+				EF05B5321FF52A990047D66C /* TestCondition.swift */,
 				EF05B5201FF3DA0F0047D66C /* Info.plist */,
 				EF05B5271FF3DA460047D66C /* PerformanceMultiSpec.m */,
 				EF05B5261FF3DA460047D66C /* TestMultiPerformanceTestsTests-Bridging-Header.h */,
 				EF05B52B1FF3DB630047D66C /* PerformanceTestInvocation.swift */,
 				EF05B52D1FF3E1FB0047D66C /* PerformanceMultiSpec.h */,
+				EF05B5301FF42B100047D66C /* StatePerformanceTestInvocation.swift */,
+				EF05B5341FF52ACF0047D66C /* PerformanceTestInvocationsGenerator.swift */,
 			);
 			path = TestMultiPerformanceTestsTests;
 			sourceTree = "<group>";
@@ -211,7 +220,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF05B51F1FF3DA0F0047D66C /* TestMultiPerformanceTestsTests.swift in Sources */,
+				EF05B5311FF42B100047D66C /* StatePerformanceTestInvocation.swift in Sources */,
+				EF05B5331FF52A990047D66C /* TestCondition.swift in Sources */,
 				EF05B5281FF3DA460047D66C /* PerformanceMultiSpec.m in Sources */,
+				EF05B5351FF52ACF0047D66C /* PerformanceTestInvocationsGenerator.swift in Sources */,
 				EF05B52C1FF3DB630047D66C /* PerformanceTestInvocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
