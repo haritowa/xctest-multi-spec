@@ -15,4 +15,9 @@ public protocol TestConditionValue {
 public struct TestCondition<T: TestConditionValue> {
     public let name: String
     public let values: [T]
+
+    public init(name: String, values: [T]) {
+        self.name = name
+        self.values = values
+    }
 }

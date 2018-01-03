@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "TestMultiPerformanceTestsTests-Swift.h" // TODO: Rename
+#import <XCTestMultiSpec/XCTestMultiSpec-Swift.h>
 #import "PerformanceMultiSpec.h"
 
 @implementation PerformanceMultiSpec

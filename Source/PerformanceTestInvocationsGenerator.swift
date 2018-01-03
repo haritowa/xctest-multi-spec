@@ -11,6 +11,10 @@ import Foundation
 public struct PerformanceTestInvocationsGenerator<S> {
     public let testMethod: (S) -> Void
     
+    public init(testMethod: @escaping (S) -> Void) {
+        self.testMethod = testMethod
+    }
+    
     private func composeName(components: [(name: String, value: String)], componentSeparator: String = "__", valuesSeparator: String = "_") -> String {
         return components
             .map { component in "\(component.name)\(valuesSeparator)\(component.value)" }

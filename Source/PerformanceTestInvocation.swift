@@ -34,15 +34,15 @@ open class PerformanceTestInvocation: NSObject {
 }
 
 extension PerformanceTestInvocation {
-    @objc var suggestedTestName: String {
+    @objc public var suggestedTestName: String {
         return testName
     }
     
-    @objc func runTestIteration() {
+    @objc public func runTestIteration() {
         run()
     }
     
-    @objc func prepareTestInteration() {
+    @objc public func prepareTestInteration() {
         prepare()
     }
 }
