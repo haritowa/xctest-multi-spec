@@ -22,12 +22,12 @@ open class PerformanceTestInvocation: NSObject {
         return _testName
     }
     
-    /// Single performance test run. All preparation work must be done during prepare method.
+    /// Runs before each measurment, does not affect total test time.
     open func prepare() {
         
     }
     
-    /// Runs before each measurment, does not affect total test time.
+    /// Single performance test run. All preparation work must be done during prepare method.
     open func run() {
         
     }
